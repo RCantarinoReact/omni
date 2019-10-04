@@ -32,17 +32,15 @@ export default function New({ history }) {
 
     return (
         <form onSubmit={handleSubmit}>
-
             <label
                 id="thumbnail"
                 style={{ backgroundImage: `url(${preview})` }}
-                className={thumb ? 'has-thumb' : ''}
-            >
+                className={thumb ? 'has-thumb' : ''}>
                 <input type="file"
                     onChange={ev => setThumb(ev.target.files[0])} />
 
                 <img src={camera}
-                    alt='select img' />
+                     alt='select img' />
             </label>
 
             <label htmlFor="company">Empresa</label>
