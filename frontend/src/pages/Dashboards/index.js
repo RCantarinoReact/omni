@@ -12,6 +12,7 @@ export default function Dashboard() {
             const respose = await Api.get('/my-spots', {
                 headers: { user_id }
             });
+            
             setSpots(respose.data)
         }
         loadSpots()
@@ -26,6 +27,9 @@ export default function Dashboard() {
                         <strong>
                             {sp.company}
                         </strong>
+                        <span>
+                            {sp.techs}
+                        </span>
                         <span>
                             {sp.price ? `R$${sp.price}/dia` : 'Gratis'}
                         </span>
